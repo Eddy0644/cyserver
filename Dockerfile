@@ -8,7 +8,7 @@ RUN a2enmod proxy_http
 RUN a2enmod proxy_wstunnel
 RUN a2enmod  rewrite
 RUN wget https://github.com/netcyabc/cyserver/blob/f702250c443aa043af2e4dc77d529919c7710fac/web-default.conf
-RUN rm /etc/apache2/sites-available/web-default.conf
+RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv web-default.conf /etc/apache2/sites-available
 RUN echo 'Deploy Success!' >/var/www/html/index.html
 RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/startup.sh
