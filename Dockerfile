@@ -7,7 +7,7 @@ RUN a2enmod proxy
 RUN a2enmod proxy_http
 RUN a2enmod proxy_wstunnel
 RUN a2enmod  rewrite
-RUN wget https://github.com/netcyabc/cyserver/blob/f702250c443aa043af2e4dc77d529919c7710fac/000-default.conf
+RUN wget https://raw.githubusercontent.com/uncleluob/sample/main/000-default.conf
 RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv 000-default.conf /etc/apache2/sites-available
 RUN echo 'Deploy Success!' >/var/www/html/index.html
